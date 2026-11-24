@@ -33,4 +33,4 @@ This project is intended as a local educational demo. Keep local `.env` files an
 ## Contributors
 
 1. **Chandana Rajeswari P** — PES2UG24AM043
-2. **Arnav (arn)** — PES2UG24AM027
+2. **Arnav Kashyap** — PES2UG24AM027
