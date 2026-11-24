@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+*.log
+work/
+AGENTS.md
+Start-Local.ps1
+Stop-Local.ps1
+scripts/setup-local-db.mjs
+scripts/stop-local.mjs

@@ -1,0 +1,63 @@
+PROJECT: Student Skill Exchange Platform
+
+OPENING
+Our platform helps students find peers who can teach skills they want to
+learn. My part is the database design, backend APIs, integration and tests.
+
+WHY TWO DATABASES?
+We use MySQL for students, skills, availability, sessions and reviews.
+These records need relationships, constraints, joins and transactions.
+MongoDB stores shared learning resources with embedded tags and optional
+format-specific metadata. A video can have a duration; an exercise can
+have page count and difficulty. This implements SQL plus NoSQL.
+
+RELATIONAL SCHEMA
+There are seven MySQL tables: students, skills, student_skills,
+availability, sessions, reviews and session_audit.
+student_skills implements a many-to-many relationship between students
+and skills. Its composite key is student_id, skill_id and kind, so a
+student can both offer and learn the same skill.
+Sessions reference a teacher, learner and skill. Each session can have
+at most one review and multiple status-change audit records.
+
+MONGODB MODEL
+The learning_resources collection stores title, summary, kind, URL,
+tags, nested metadata, ownerId, skillId and timestamps.
+ownerId and skillId refer to MySQL records. The API checks those IDs;
+MongoDB does not enforce SQL foreign keys across the two servers.
+
+ADVANCED FEATURES
+1. Transactions: booking locks participants and checks conflicts.
+2. Views: teacher_ratings and skill_popularity.
+3. Stored procedure: student_summary.
+4. Triggers: validate_review and audit_session_status.
+5. Indexes: SQL matching/schedule indexes and MongoDB text/lookup indexes.
+6. MongoDB aggregation: popular tags and resource statistics.
+
+SECURITY AND INTEGRITY
+Passwords are bcrypt hashes. Login creates a signed HTTP-only cookie.
+SQL uses parameterized queries. The APIs validate inputs and permissions.
+Only resource authors can edit/delete their resources. MySQL constraints
+and MongoDB document validation protect data at the database level.
+Database credentials are generated locally and kept out of source control.
+
+HONEST LIMITS
+Matching uses an explainable score, not machine learning.
+Resource search is full-text keyword search, not vector similarity.
+There is no distributed transaction across MySQL and MongoDB. Current
+resource writes affect MongoDB after checking their MySQL references.
+An eventual account/skill deletion feature would need reconciliation.
+
+IF ASKED TO PROVE IT WORKS
+Run 2-DEMONSTRATE-BACKEND.bat for the live database/API walkthrough.
+Run 3-RUN-ALL-TESTS.bat to show validation, SQL, API and MongoDB checks.
+Run 5-OPEN-SQL-CONSOLE.bat and enter:
+  SHOW TABLES;
+  SHOW CREATE TABLE student_skills;
+  SHOW CREATE TABLE sessions;
+  SELECT * FROM skill_popularity;
+  SELECT * FROM teacher_ratings;
+  CALL student_summary(1);
+
+Know the code rather than claiming unverified individual authorship.
+Explain precisely the database/backend work assigned to you and your team.

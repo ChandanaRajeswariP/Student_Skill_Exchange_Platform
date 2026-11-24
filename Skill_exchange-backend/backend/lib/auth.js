@@ -1,0 +1,4 @@
+import {cookies} from 'next/headers';import {SignJWT,jwtVerify} from 'jose';
+function key(){if(!process.env.AUTH_SECRET||process.env.AUTH_SECRET.length<32)throw new Error('Configure AUTH_SECRET with at least 32 characters');return new TextEncoder().encode(process.env.AUTH_SECRET);}
+export async function signIn(id){const token=await new SignJWT({}).setProtectedHeader({alg:'HS256'}).setSubject(String(id)).setIssuedAt().setExpirationTime('7d').sign(key());(await cookies()).set('skill_session',token,{httpOnly:true,sameSite:'strict',secure:process.env.NODE_ENV==='production'&&process.env.SKILLSWAP_LOCAL_HTTP!=='1',path:'/',maxAge:604800});}
+export async function userId(){const token=(await cookies()).get('skill_session')?.value;if(!token)return null;try{const {payload}=await jwtVerify(token,key(),{algorithms:['HS256']});return Number(payload.sub)||null;}catch{return null;}}

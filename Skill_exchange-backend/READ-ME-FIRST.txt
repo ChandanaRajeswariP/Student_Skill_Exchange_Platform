@@ -1,0 +1,60 @@
+CHANDANA DBMS — BACKEND PRESENTATION PACKAGE
+Windows 10/11, 64-bit
+
+SEND THIS ENTIRE ZIP. Do not send individual files from it.
+
+ON HER LAPTOP
+1. Save the ZIP, right-click it and choose Extract All.
+   A short local folder such as C:\ChandanaDBMS is recommended.
+   Do not run the files from inside the ZIP viewer.
+2. Double-click 1-START-BACKEND.bat.
+   The first run creates new local MySQL and MongoDB databases, generates
+   private credentials and loads fictional demo data. Wait for READY.
+3. Double-click 2-DEMONSTRATE-BACKEND.bat.
+   Press Enter for each presentation step. No frontend or Postman is needed.
+4. Open PRESENTATION\OPEN-PRESENTATION.html in a normal browser
+   when the professor asks for the ER diagram or relational schema.
+5. Use 3-RUN-ALL-TESTS.bat to show the automated tests.
+6. Use 5-OPEN-SQL-CONSOLE.bat if the professor wants to type SQL directly.
+7. When finished, double-click 4-STOP-BACKEND.bat before moving the folder.
+
+Node.js, MySQL, MongoDB and the application's dependencies are included.
+No Docker, npm installation or internet is required to start this package.
+External tutorial links are optional and require internet if opened.
+There is no Windows service installation and no system-wide database setup.
+
+BACKEND DEMO
+The guided terminal demonstration shows:
+- Actual MySQL tables, foreign keys and CREATE TABLE definition
+- Joins, views, ratings and skill-popularity aggregation
+- Triggers, stored procedure and an UPDATE followed by ROLLBACK
+- Actual MongoDB documents, embedded tags, metadata and indexes
+- MongoDB full-text search and popular-tag aggregation
+- MySQL-backed API login and cross-database resource creation
+- API update/delete with cleanup of its own temporary resource
+
+DEFAULT ADDRESSES
+API: http://127.0.0.1:3000/api/skills
+MySQL: 127.0.0.1:13306, database skill_exchange
+MongoDB: 127.0.0.1:27028, database skill_resources
+Demo login: chandana@example.com / Student@123
+
+IMPORTANT
+Run it once on her laptop BEFORE the presentation. If an error appears,
+send the complete error text or a photo of the terminal.
+Port 3000 must be available. Close any other app using that port first.
+The portable package is for Windows x64; it is not a Mac/Linux package.
+
+FILES
+PRESENTATION: diagrams, relational schema, SQL source and speaking notes.
+backend: original source, compiled API, tests, documentation and dependencies.
+runtime: bundled Windows executables and license files.
+backend\work: created on first run; contains the saved databases and secrets.
+
+Do not publish the generated .env or backend\work folder. They are not in
+the clean ZIP. Do not delete backend\work after setup: it stores her data.
+Do not copy or zip live database files while the servers are running.
+
+This package demonstrates the backend and SQL + NoSQL requirement.
+It does not claim that the entire team's frontend, report or individual
+Git contribution requirements have all been completed.

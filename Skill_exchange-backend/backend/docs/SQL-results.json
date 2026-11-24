@@ -1,0 +1,266 @@
+{
+  "generatedAt": "2026-10-22T07:11:05.432Z",
+  "source": "database/04-queries-and-transactions.sql",
+  "results": [
+    {
+      "fieldCount": 0,
+      "affectedRows": 0,
+      "insertId": 0,
+      "info": "",
+      "serverStatus": 16394,
+      "warningStatus": 0,
+      "stateChanges": {
+        "systemVariables": {},
+        "schema": "skill_exchange",
+        "gtids": [],
+        "trackStateChange": null
+      },
+      "changedRows": 0
+    },
+    [
+      {
+        "name": "Aarav",
+        "skill": "Data Analysis",
+        "level": 4
+      },
+      {
+        "name": "Aarav",
+        "skill": "Python",
+        "level": 5
+      },
+      {
+        "name": "Chandana",
+        "skill": "SQL & Databases",
+        "level": 4
+      },
+      {
+        "name": "Ishaan",
+        "skill": "Public Speaking",
+        "level": 3
+      },
+      {
+        "name": "Ishaan",
+        "skill": "Web Development",
+        "level": 4
+      },
+      {
+        "name": "Meera",
+        "skill": "Photography",
+        "level": 3
+      },
+      {
+        "name": "Meera",
+        "skill": "UI/UX Design",
+        "level": 5
+      }
+    ],
+    [
+      {
+        "category": "Programming",
+        "offerings": 4,
+        "average_level": "4.25"
+      },
+      {
+        "category": "Design",
+        "offerings": 1,
+        "average_level": "5.00"
+      },
+      {
+        "category": "Communication",
+        "offerings": 1,
+        "average_level": "3.00"
+      },
+      {
+        "category": "Creative",
+        "offerings": 1,
+        "average_level": "3.00"
+      }
+    ],
+    [
+      {
+        "name": "Python",
+        "level": 5
+      },
+      {
+        "name": "Web Development",
+        "level": 4
+      },
+      {
+        "name": "SQL & Databases",
+        "level": 4
+      },
+      {
+        "name": "UI/UX Design",
+        "level": 5
+      },
+      {
+        "name": "Public Speaking",
+        "level": 3
+      },
+      {
+        "name": "Photography",
+        "level": 3
+      },
+      {
+        "name": "Data Analysis",
+        "level": 4
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "name": "Python",
+        "category": "Programming",
+        "teachers": 1,
+        "learners": 1
+      },
+      {
+        "id": 2,
+        "name": "Web Development",
+        "category": "Programming",
+        "teachers": 1,
+        "learners": 0
+      },
+      {
+        "id": 3,
+        "name": "SQL & Databases",
+        "category": "Programming",
+        "teachers": 1,
+        "learners": 0
+      },
+      {
+        "id": 4,
+        "name": "UI/UX Design",
+        "category": "Design",
+        "teachers": 1,
+        "learners": 0
+      },
+      {
+        "id": 5,
+        "name": "Public Speaking",
+        "category": "Communication",
+        "teachers": 1,
+        "learners": 0
+      },
+      {
+        "id": 6,
+        "name": "Photography",
+        "category": "Creative",
+        "teachers": 1,
+        "learners": 0
+      },
+      {
+        "id": 8,
+        "name": "Data Analysis",
+        "category": "Programming",
+        "teachers": 1,
+        "learners": 0
+      },
+      {
+        "id": 7,
+        "name": "Guitar",
+        "category": "Music",
+        "teachers": 0,
+        "learners": 0
+      }
+    ],
+    [
+      {
+        "teacher_id": 2,
+        "review_count": 1,
+        "average_rating": "5.00"
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "name": "Chandana",
+        "skills_offered": 1,
+        "completed_sessions": 1
+      }
+    ],
+    {
+      "fieldCount": 0,
+      "affectedRows": 0,
+      "insertId": 0,
+      "info": "",
+      "serverStatus": 42,
+      "warningStatus": 0,
+      "changedRows": 0
+    },
+    {
+      "fieldCount": 0,
+      "affectedRows": 0,
+      "insertId": 0,
+      "info": "",
+      "serverStatus": 16395,
+      "warningStatus": 0,
+      "stateChanges": {
+        "systemVariables": {},
+        "schema": null,
+        "gtids": [],
+        "trackStateChange": null
+      },
+      "changedRows": 0
+    },
+    [
+      {
+        "id": 1,
+        "name": "Chandana"
+      }
+    ],
+    {
+      "fieldCount": 0,
+      "affectedRows": 1,
+      "insertId": 0,
+      "info": "Rows matched: 1  Changed: 1  Warnings: 0",
+      "serverStatus": 11,
+      "warningStatus": 0,
+      "changedRows": 1
+    },
+    [
+      {
+        "id": 1,
+        "bio": "Temporary transaction demonstration"
+      }
+    ],
+    {
+      "fieldCount": 0,
+      "affectedRows": 0,
+      "insertId": 0,
+      "info": "",
+      "serverStatus": 16394,
+      "warningStatus": 0,
+      "stateChanges": {
+        "systemVariables": {},
+        "schema": null,
+        "gtids": [],
+        "trackStateChange": null
+      },
+      "changedRows": 0
+    },
+    [
+      {
+        "id": 1,
+        "bio": "I love turning tricky concepts into simple lessons."
+      }
+    ],
+    [],
+    [
+      {
+        "id": 1,
+        "select_type": "SIMPLE",
+        "table": "student_skills",
+        "partitions": null,
+        "type": "range",
+        "possible_keys": "idx_skill_match",
+        "key": "idx_skill_match",
+        "key_len": "10",
+        "ref": null,
+        "rows": 1,
+        "filtered": 100,
+        "Extra": "Using where; Using index"
+      }
+    ]
+  ]
+}

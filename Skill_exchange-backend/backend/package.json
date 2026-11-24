@@ -1,0 +1,29 @@
+{
+  "name": "student-skill-exchange-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "db:setup": "node --env-file=.env scripts/setup-db.mjs",
+    "test:db": "node --env-file=.env scripts/test-database.mjs",
+    "test:api": "node --env-file=.env scripts/test-api.mjs",
+    "seed:demo": "node --env-file=.env scripts/seed-demo.mjs",
+    "sql:demo": "node --env-file=.env scripts/run-sql-demo.mjs",
+    "mongo:setup": "node --env-file=.env scripts/setup-mongo.mjs",
+    "seed:resources": "node --env-file=.env scripts/seed-resources.mjs",
+    "test:resources": "node --env-file=.env scripts/test-resources.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "jose": "^6.1.0",
+    "mongodb": "^6.21.0",
+    "mysql2": "^3.15.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.0"
+  }
+}

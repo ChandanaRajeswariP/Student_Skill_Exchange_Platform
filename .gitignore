@@ -1,0 +1,9 @@
+**/node_modules/
+**/.next/
+**/runtime/
+**/work/
+**/.env
+**/.env.*
+!**/.env.example
+**/dist/
+**/app/server/data/db.json

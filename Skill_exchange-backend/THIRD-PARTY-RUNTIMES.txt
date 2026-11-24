@@ -1,0 +1,19 @@
+Bundled unmodified Windows x64 runtimes
+
+Node.js 24.16.0: https://nodejs.org/
+License: runtime/node/LICENSE
+Source: https://github.com/nodejs/node/tree/v24.16.0
+
+MySQL Community Server 8.0.46: https://dev.mysql.com/downloads/mysql/
+License and third-party notices: runtime/mysql/LICENSE
+Source: https://github.com/mysql/mysql-server/tree/mysql-8.0.46
+
+MongoDB Community Server 8.0.17: https://www.mongodb.com/try/download/community
+License and notices: runtime/mongodb/LICENSE-Community.txt,
+runtime/mongodb/THIRD-PARTY-NOTICES and runtime/mongodb/MPL-2.
+Official binary archive: https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-8.0.17.zip
+Source: https://github.com/mongodb/mongo/tree/r8.0.17
+
+Node dependency licenses remain with their packages in backend/node_modules.
+Windows C++ runtime support DLLs are included beside the executables.
+The application source, SQL definitions and scripts are in backend.
